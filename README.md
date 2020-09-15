@@ -1,4 +1,4 @@
-###Code mod to run Dialup firmware on the Muskrat/MSG for more knob interactivity. 
+### Code mod to run Dialup firmware on the Muskrat/MSG for more knob interactivity. 
 
 Follow instructions on the [Moffenzeef Wiki](https://github.com/moffenzeefmodular/MSG/wiki) to flash to an ATTINY85 chip.
 
