@@ -9,6 +9,9 @@
       By: David Johnson-Davies
   http://www.technoblogy.com/show?QBB
           CC BY 4.0
+
+  Modded for use on Muskrat/MSG hardware
+  
 */
 
 #include <avr/pgmspace.h>
@@ -20,6 +23,8 @@ unsigned int Note2 = 0;
 unsigned int Note3 = 0;
 
 int potRaw = 0;
+int potRaw2 = 0;
+int potRaw3 = 0;
 int pitch = 0;
 int modulate = 0;
 int modulator = 0;
@@ -44,10 +49,12 @@ void setup() {
 
 void loop() {
   potRaw = analogRead(A3);
+  potRaw2 = analogRead(A2);
+  potRaw3 = analogRead(A1);
   Note =  map(potRaw, 0, 1023, 1, 32);
-  Note1 = map(potRaw, 0, 1023, 1, 32); 
-  Note2 = map(potRaw, 0, 1023, 1, 32);  
-  OCR0A = map(potRaw, 0, 1015, 80, 20);
+  Note1 = map(potRaw2, 0, 1023, 1, 32); 
+  Note2 = map(potRaw3, 0, 1023, 1, 32);  
+  OCR0A = map(potRaw3, 0, 1015, 80, 20);
   }
 
 // Sample interrupt
